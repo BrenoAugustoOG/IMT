@@ -1,0 +1,96 @@
+AULÃO LÓGICA DE PROGRAMAÇÃO
+
+FLUXOGRAMAS
+um diagrama que explica de forma visual um processo
+
+variáveis
+tipos de variaveis:
+int (numeros inteiros) , float (numeros com decimais) , string (palavras, nomes) , boolean (condicionais) , list (lista)
+
+operadores aritméticos
++ : soma
+- : subtração
+* : multiplicação
+/ : divisão
+// : divisão inteira
+% : resto de divisão (ele vai retornar o resto da divisão)
+** : potência
+
+#operação com Strings
+nome = 'Alice'
+sobrenome = 'Silva'
+nome_completo = nome + ' ' + sobrenome           #saída: Alice Silva
+nome_sem_concatenar = nome + sobrenome     # saída: AliceSilva
+
+
+operadores relacionais (mais utilizados nas estruturas de decisão)
+== : comparação
+!= : desigualdade
+< : menor
+<= :menor que
+> : maior
+>= : maior que
+
+operadores lógicos
+and : uma condição E outra
+or : uma condição OU outra
+in :  está presente
+no : não
+
+#exemplos com and, or, in, not
+if "Ford" in marcas and "Chevrolet" in marcas:
+	print("Tem Ford e Chevrolet")
+
+entrada e saida de operadores
+Utilizar o input() (entrada) e print() (saída)
+
+formatação de Strings
+PlaceHolders:
+print('Basta utilizar %s ou %s operadores, para inserir várias strings.' %('um' , 'mais'))
+
+.format()
+'Primeiro objeto: {a}, segundo objeto {b}, terceiro objeto: {c}' .format(a=1, b='nome', c=1.234)
+
+estruturas de decisão
+simples, composta
+if -> se essa condição, faça isso
+elif -> senão o anterior, então, se...
+else -> senão todos os outros, então
+
+#exemplo
+nota = int(input("Digite a nota: "))
+if nota == 10:
+	print('s')
+elif nota >= 8 and nota <10:
+	print('a')
+elif 6<= nota < 8:
+	print('b')
+else:
+	print('f')
+
+estruturas de repetição
+for -> desde que a condição é verdadeira, continue fazendo
+
+FOR + IN
+for i in range(10):
+    print(i)
+
+marcas = ['Ford', 'Chevrolet', 'Fiat', 'Volkswagen']
+for marca in marcas:
+    print(marca)
+
+FOR + IN COM 3 PARÂMETROS
+for i in range(0,10,1):
+    print(i)
+
+0 - inicio
+1- passo
+10- fim
+
+While -> enquanto estiver atendendo a condição faça
+
+cont = 0
+while cont <= 10:
+    print(cont)               #saída: 0 1 2 3 4 5 6 7 8 9 10
+    cont += 1                 #incrementa o contador em 1 por iteração
+
