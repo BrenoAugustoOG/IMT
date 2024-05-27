@@ -1,0 +1,30 @@
+2º AULÃO POO - 1º SEMESTRE
+
+# Introdução a POO: A ideia do POO é modularizar o seu programa
+CLasse é um molde de um objeto
+Objeto são instâncias dessa CLasse
+
+Quando o atributo está privado, somente a classe onde ele ta sendo escrito poderá ser usado
+
+Getters and Setters
+Os Getters servem para voce ler esse valor
+Os Setters servem para voce alterar esse valor
+
+# Coleções
+
+# Herança
+Ela serve para reutilizar o código tendo sempre uma classe maior onde existem subclasses que herdam dela
+
+# Sobrecarga
+A assinatura de uma função é definida por:
+- Nome da função
+- A quantidade de parâmetros
+
+# Conexão com Banco de Dados "Famoso JDBC"
+Sempre criar o metodo "public Connection obtemConexao() {
+    try{
+        Connection c = DriverManager.getConnection(
+            "jdbc:mysql://" + host + ":" + porta + "/" + bd, usuario, senha
+        )
+    }
+}"
