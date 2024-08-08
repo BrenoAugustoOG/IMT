@@ -1,0 +1,232 @@
+1º AULÃO POO - 1º SEMESTRE
+
+algoritmo -. lista de instruções utilizadas para que possamos passar para o computador instruções necessárias
+
+hello world - linguagem mais basica do java
+public class HelloWorld{
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+sintaxe - forma como voce escreve em cada linguagem
+
+variáveis locais
++ String    -------------------|
++ Double			       |   -> MAIS UTILIZADAS
++ Int                                |
++ Float	-------------------|                                                            (FLOAT = 32 BYTES)
+
+variáveis primitivas:
+Byte, Long, Short, Char, Float, Boolean
+
+palavras reservadas:
+break, switch, if, char, while, static, public, private
+
+operações aritiméticas
++ | - | / | * | %
+
+operações atribuição
+
+operações de comparação
+== | >= | <=
+
+operações lógicas
+&& 
+|| 
+! 
+
+====================================================================================================
+Estruturas de condição
+If/Else ->
+public class IfElse {
+	public static void main (String [] args) {
+		int idade = 18;
+		
+		if (idade >= 18){
+			System.out.println("Você pode beber!");
+		}
+
+		if (idade >=21){
+			System.out.println("Você pode beber até fora do país meu querido);
+		}
+
+		else{
+			System.out.println("Você não tem a idade autorizada para beber");
+		}
+	}
+}
+
+*NÃO É OBRIGATORIO VOCE SEMPRE TER UM ELSE DEPOIS DE UM IF, PORÉM SE FOR UTILIZAR O ELSE, É OBRIGATÓRIO USAR O IF
+
+Operador ternário ->
+public class OperadorTernario {
+	public static void main (String [] args) {
+		
+		String mensagemFinal = mediaFinal >= 6 ? "Passou de ano!" : "Reprovado";
+ 
+	}
+}
+
+Estrutura and ->
+public class OperadorAnd {
+	public static void main (String [] args) {
+		
+		boolean maiorDeIdade = false;
+
+		if(maiorDeIdade >= 6 || pode){
+			System.out.println("Entrou no If");
+		}
+ 
+	}
+}
+
+Switch Case ->
+public class SwitchCase {
+	public static void main (String [] args) {
+		int diaDaSemana = 3;
+		
+		switch(diaDaSemana){
+		case 1:
+			System.out.println("Domingo");
+		case 2:
+			System.out.println("Segunda");
+		case 3:
+			System.out.println("Terça");		
+		case 4:
+			System.out.println("Quarta");
+		case 5:
+			System.out.println("Quinta");
+		case 6:
+			System.out.println("Sexta");
+		case 7:
+			System.out.println("Sábado");
+			break;
+		default:
+			System.out.println("Não condiz com nenhum numero relacionado aos dias anteriores");
+		}
+	}
+}
+
+=======================================================================================================
+Estrutura de repetição
+For -> Sabe quantas repetições for utilizar
+While -> Usa antes das repetições
+Do/While -> Usa durante as repetições
+
+public class EstruturaDeRepeticao{
+    public static void main(String[] args) {
+        int contador = 0;
+
+        //Utilizando o While
+        
+	while(contador <= 10){
+            System.out.println(contador);
+            contador++; //contador = contador + 1;
+        }
+
+        //Utilizando o Do/While
+        
+	do{ //Roda pelo menos uma vez!
+            System.out.println(contador);
+        } while(contador <= 10);
+
+        //Utilizando o for (atribuição para a variável; condição; contador
+        
+	for(int i = 0; i<= 10; i++){
+            System.out.println(i);
+        }
+    }
+}
+
+======================================================================================================
+Manipulação de Strings
+public class ManipulacaoDeStrings{
+    public static void main(String[] args) {
+        String primeiroNome = "Breno";
+        String sobreNome = "Gandolfo";
+
+        //Concatenação básica
+        String nomeCompleto = primeiroNome + " " + sobreNome;
+
+        //Utilizando o método concat
+        String nomeCompleto = primeiroNome.concat(sobreNome);
+
+        //CONCATENAR = JUNTAR
+
+        //Utilizando o método format
+        String nomeCompleto = String.format("Meu nome é %s %s", primeiroNome, sobreNome);
+        
+        // %f -> format, %s -> string, %d -> decimal
+    }
+}
+
+===============================================================================================
+Programação Orientada a Objetos
+public class Jogo{
+    //Atributos variaveis ao meu objeto
+    private String titulo;
+    private String sinopse;
+    private int precoInicial;
+    private int precoFinal;
+    private double descontoEmPorcentagem;
+    
+    public void ExibeNome(){
+        System.out.println("O nome do jogo é: " + this.titulo);
+    }
+
+    //método set
+    public void setTitulo(String titulo){
+        this.titulo = titulo;
+    }
+
+    public void setSinopse(String sinopse){
+        this.sinopse = sinopse;
+    }
+
+    public void setPrecoInicial(int precoInicial){
+        this.precoInicial = precoInicial;
+    }
+
+    public void setDescontoEmPorcentagem(double descontoEmPorcentagem){
+        this.descontoEmPorcentagem = descontoEmPorcentagem;
+    }
+
+    //método get
+    public String getTitulo(){
+        return titulo;
+    }
+
+    public String getSinopse(){
+        return sinopse;
+    }
+
+    public int getPrecoInicial(){
+        return precoInicial;
+    }
+
+    public double getDescontoEmPorcentagem(){
+        return descontoEmPorcentagem;
+    }
+
+    //método construtor
+    public Jogo(String titulo, String sinopse, int precoInicial, int precoFinal, double descontoEmPorcentagem){
+        this.titulo = titulo;
+        this.sinopse = sinopse;
+        this.precoInicial = precoInicial;
+        this.precoFinal = precoFinal;
+        this.descontoEmPorcentagem = descontoEmPorcentagem;
+    }
+    
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Jogo jogo1 = new Jogo("Minecraft","Um construtor",100,0, 0.5);
+        
+        jogo1.setTitulo("Terraria");
+        jogo1.setPrecoInicial(300);
+
+        jogo1.ExibeNome();
+    }
+}

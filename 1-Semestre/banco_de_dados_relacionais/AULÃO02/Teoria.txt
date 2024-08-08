@@ -1,0 +1,31 @@
+-- AULAO BANCO DE DADOS PARA P2
+
+-- Agrupamento de dados:
+-- Select :
+-- Select Insert : inserção de uma ou mais linhas em uma tabela
+-- Select Update : para atualizar os dados dentro da tabela
+-- Select Delete : O comando DELETE no SQL
+
+-- Um JOIN é um meio de combinar colunas de uma (auto-junção) ou mais tabelas, usando
+-- valores comuns a cada uma delas
+
+-- INNER JOIN: compara linhas da tabela A e B, encontrando pares que satisfaçam a condição de junção. Se a condição for
+-- verdadeira, os valores são combinados em uma nova linhas
+
+-- LEFT JOIN: compara linhas da tabela A coma todas as linhas da tabela B
+
+-- RIGHT JOIN: compara linhas da tabela B com todas as linhas da tabela A
+
+-- FULL JOIN: retorna todas as linhas das tabelas unidas, correspondidas ou não, combinando as funcionalidades 
+-- LEFT JOIN E RIGHT JOIN
+
+-- GROUP BY: o agrupamento de dados é utilizado para exibir resultados de um conjunto comum de informações
+
+-- MAX, MIN, AVG, SUM E COUNT
+
+-- LIKE/NOT LIKE é utilizado com a cláusula WHERE para filtrar(ou pesquisar) colunas que estão em formato de caractere
+-- %s = termina com s
+-- a%s = começa com a termina com s
+-- %a% = a em qualquer posição
+
+-- A cláusula HAVING é utilizada junto da GROUP BY, de forma que ela filtra o grupo formado pelo GROUP BY
