@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="primeiro-nome">Primeiro nome:</label>
+            <input type="text" id="primeiro-nome">
+            <label>
+                Sobrenome:
+                <input type="text">
+            </label>
+        </p>
+
+        <p>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone">
+            <label>
+                Email:
+                <input type="email">
+            </label>
+        </p>
+<!-- SEMANTICAMENTE FALANDO É MELHOR USAR DIV, PORÉM ESTOU USANDO <P> SÓ PARA DEMONSTRAR -->
+        <p>
+            <label for="cor">Escolha sua cor preferida:</label>
+            <input type="color" id="cor">
+        </p>
+
+        <p>
+            <label>
+                Escolha um arquivo:
+                <input type="file">
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Deixe seu comentário:
+                <textarea rows="5" cols="25"></textarea>
+            </label>
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
