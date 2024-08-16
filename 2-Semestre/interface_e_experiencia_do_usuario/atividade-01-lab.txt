@@ -1,0 +1,20 @@
+Avaliando o site do Google Maps de acordo :
+
+Mapeamento:
+Ícone Lupa de Pesquisa, Garfos, Camas, câmera, os botões de "+" e "-" que significam o zoom
+
+Visibilidade:
+Mapa bem esclarecido, sanduíche, aba de navegação
+
+Feedback:
+Quando coloca uma rota mostra o progresso (sendo azul) e mostra que quando termina, tem um aviso na tela de que a rota foi concluída, todos os botões tem uma pequena animação ou troca de cor sinaliza que é uma interação
+
+Restrições:
+O trajeto automaticamente identifica que a rua é uma contramão e não manda, sempre tem que colocar um ponto de partida e chegada, colocar o boneco de visualização somente onde estiver em azul como demonstrado no mapa
+
+Consistência:
+Todos os botões tem arredondamento seguindo os padrões do aplicativo do google, todos os lugares ele aponta em formato de um balão e os separou por classes, 
+
+Affordance:
+Campo e Lupa de Pesquisa, a funcionalidade mostrar barra lateral, zoom do mapa
+ 
