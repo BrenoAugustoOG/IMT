@@ -1,0 +1,16 @@
+p{
+    color: blue;
+}
+h1{
+    color: green;
+}
+strong{
+    color: red;
+}
+#titulo{
+    color: blueviolet;
+    text-align: center;
+}
+p#descricao{
+    color: green;
+}
