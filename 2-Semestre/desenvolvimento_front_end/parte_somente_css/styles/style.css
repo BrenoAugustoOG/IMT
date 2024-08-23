@@ -1,16 +1,59 @@
-p{
+p {
     color: blue;
 }
-h1{
+
+h1 {
     color: green;
 }
-strong{
+
+strong {
     color: red;
 }
-#titulo{
+
+#titulo {
     color: blueviolet;
     text-align: center;
 }
-p#descricao{
+
+p#descricao {
     color: green;
 }
+
+p.promocao {
+    text-align: center;
+    background-color: aqua;
+}
+
+.nova {
+    color: yellow;
+}
+
+p.final-pagina#rodape {
+    text-align: center;
+    background-color: burlywood;
+    /* esse seletor somente irá funcionar se for um paragrafo <p>, se tiver dentro da classe .final-pagina e também se tiver o id #rodape */
+}
+
+.curso .novo-curso {
+    background-color: aquamarine;
+}
+
+.novo-curso {
+    color: red;
+}
+
+.curso, .novo-curso, #contato {
+    padding: 10px;
+    border: solid 1px black;
+}
+
+/* 
+    Tipos de Seletores (exemplos citados acima)
+    tipo -> seletor/tag
+    .tipo -> classe 
+    #tipo -> id
+    sel1sel2 -> e
+    sel1,sel2 -> ou
+    sel1 sel2 -> herança
+    sel1>sel2 -> herança/filho direto
+*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascata e Especifidades</title>
+    <!-- <style>
+        p{
+            color: blue;
+        }
+    </style> -->
+    <link rel="stylesheet" href="styles/cascata_especificidade.css">
+    <style>
+        #titulo{
+            color: blue;
+        }
+        .descricao{
+            color: green;
+        }
+        p{
+            color: black;
+        }
+        .principal article{
+            background-color: aquamarine;
+        }
+        main article{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p style="color: green; color: blueviolet;">meu parágrafo favorito</p> -->
+     <main class="principal">
+        <article>
+            <p id="titulo" class="descricao">
+                Algoritmo de Especifidades.
+            </p>
+        </article>
+     </main>
+</body>
+</html>

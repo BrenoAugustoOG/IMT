@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mais seletores</title>
+    <!-- vamos especificar as regras CSS aqui, para simplificar -->
+    <style>
+        article > p{
+            padding: 10px;
+            background-color: aqua;
+        }
+        #principal p.promocao{
+            padding: 10px;
+            background-color: burlywood;
+        }
+        body #principal article section p.coordenadores{
+            text-align: center;
+        }
+        main article section p.coordenadores{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="principal">
+        <h1 id="titulo">Portal de cursos</h1>
+        <p id="descricao">Possuímos cursos nas mais diversas áreas</p>
+        <p class="promocao nova">Venha conversar conosco e conhecer
+            nossas ofertas de <strong>bolsas de estudos</strong>.</p>
+        <p>Cursos:</p>
+        <article>
+            <p class="novo-curso">Medicina</p>
+            <p class="curso">Engenharia de Computação</p>
+            <p class="curso">Farmácia</p>
+            <section>
+                <p class="coordenadores"> Nossos coordenadores estão a disposição.</p>
+            </section>
+        </article>
+        <p id="contato" class="final-pagina">Entre em contato:
+            11223344</p>
+        <p id="rodape" class="final-pagina">Todos os direitos
+            reservados</p>
+    </main>
+</body>
+
+</html>

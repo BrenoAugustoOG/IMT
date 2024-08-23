@@ -1,0 +1,10 @@
+p{
+    color: red ; /*!important*/ 
+} 
+
+/* Pesos dos seletores: 
+    001 - tipo
+    010 - classe
+    100 - id
+    10000 - !important    
+*/
