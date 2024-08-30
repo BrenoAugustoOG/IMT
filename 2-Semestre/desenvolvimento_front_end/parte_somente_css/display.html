@@ -7,10 +7,15 @@
     <style>
         p {
             background-color: #CCC;
+            border: 2px black dashed;
+            border-radius: 10px;
         }
 
         a {
             background-color: rgb(202, 184, 231);
+            border-width: thin;
+            border-style: solid;
+            border-color: red;
         }
 
         footer {
@@ -22,6 +27,7 @@
         button {
             background-color: greenyellow;
         }
+
         .professores{
             display: block;
             width: 150px;
@@ -34,6 +40,12 @@
             width: 150px;
             height: 150px;
             text-align: center;
+            border-bottom: 3px red solid;
+            border-radius: 20px 40px;
+        }
+        .nova{
+            border-radius: 10px 30px 50px 70px;
+            padding: 30px;
         }
     </style>
 </head>
@@ -46,7 +58,7 @@
         <a class="Contato" href="#">Entre em contato</a>
         <footer class="rodape">Portal de cursos</footer>
         <button class="botao">Clique aqui para falar conosco</button>
-        <p>Todos os direitos reservados</p>
+        <p class="nova">Todos os direitos reservados</p>
     </article>
 </body>
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Preenchimento</title>
+    <style>
+        .primeiro, .segundo{
+            width: 200px;
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: border-box;
+               /*O border box significa que o tamanho deve ser da direção da borda para dentro do conteúdo!  */
+        }
+
+        .primeiro{
+            padding: 20px;
+        }
+
+        .segundo{
+            padding: 20px 40px;
+        }
+
+        article{
+            border: 2px red solid;
+            padding: 20px;
+        }
+
+        body{
+            border: 2px green solid;
+            padding: 20px;
+        }
+
+        .terceiro{
+            width: 500px;
+            border: 1px blueviolet dashed;
+            margin: 20px;
+        }
+        .quarto{
+            width: 500px;
+            border: 2px dotted gray;
+            margin: auto 10px;
+        }
+        .outra{
+            text-align: justify;
+            border: 1px red solid;
+        }
+        #ultimo{
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <article id="lorem">
+        <p class="primeiro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, nulla voluptate? Harum natus perspiciatis nisi et, debitis corporis ea nam. Blanditiis, reiciendis facere eveniet aliquid nisi dolor rem laboriosam tenetur.</p>
+        <p class="segundo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A excepturi aliquam praesentium magni quibusdam, repellat saepe consectetur quidem id, architecto beatae ullam esse? Tempore quaerat laudantium natus hic praesentium dolores.</p>
+        <p class="terceiro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti fuga repellendus ea incidunt consequatur est obcaecati, consequuntur tempore rem autem! Asperiores corrupti consectetur ea exercitationem ratione temporibus doloribus ad!</p>
+        <p class="quarto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum ad tempora in expedita velit nemo iste dolorum quaerat. Tempore possimus saepe odio, earum ducimus quo animi dolores tenetur ipsum!</p>
+        <p class="outra">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque odio nostrum fugiat maxime vero delectus harum officia? Maiores rem natus 
+        officiis hic quaerat doloribus, ipsum placeat rerum, dolor temporibus pariatur!</p>
+        <p id="ultimo" class="outra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aspernatur voluptatem ipsam perspiciatis delectus quidem molestias enim beatae tempore soluta sit rem, dignissimos veritatis omnis aliquid id nihil quasi possimus?</p>
+    </article>
+</body>
+</html>
