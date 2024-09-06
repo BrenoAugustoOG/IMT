@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts Fixo x Fluido</title>
+
+    <style>
+        body{
+            margin: 0;
+            /* font-size: 32px; */
+        }
+        
+        main{
+            border: 2px blue solid;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        p{
+            display: none;
+        }
+        
+        .curso{
+            /* display: inline-block; */
+            border: 2px red solid;
+            padding: 10px;
+            /* width: 20%; */
+            height: 180;       
+        }
+
+        @media(min-width:900px){
+            .curso{
+                display: inline-block;
+                width: 20%;
+            }
+            P{
+                display: block;
+            }
+        }
+        @media(min-width:750px){
+            .principal{
+                background-color: antiquewhite;
+            }
+            .curso{
+                background-color: aliceblue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main class="principal">
+
+    <article class="curso">Ciência da Computação</article>
+    <article class="curso">Sistemas de Informação</article>
+    <article class="curso">Inteligência Artificial</article>
+
+    <p>SURPRESA!!!</p>
+
+    </main>
+</body>
+</html>
