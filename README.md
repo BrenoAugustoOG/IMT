@@ -1,3 +1,52 @@
-# IMT 🎓
-<p>Meu nome é Breno Augusto, e estou cursando Ciência da Computação no Instituto Mauá de Tecnologia e aqui estão parte dos exercícios resolvidos em aula durante o período da minha graduação, caso queira dar uma olhada, fique a vontade! 📚 </p>
-<p>Basicamente este repositório está sendo feito para compartilhar com as pessoas do GitHub, o meu avanço dentro do ramo da tecnologia! Mostrando todas as atividades realizadas dentro da aulas de Ciência da Computação.</p>
+# Repositório de Conteúdos - Período de Graduação - Breno Augusto
+
+Este repositório foi criado para armazenar e organizar os conteúdos e projetos desenvolvidos durante o período de graduação. O objetivo é fornecer um espaço centralizado para armazenar códigos, documentos e outros materiais relevantes produzidos ao longo dos estudos.
+
+## Descrição
+
+Este repositório contém diversos arquivos e pastas relacionados às atividades e projetos desenvolvidos ao longo da graduação. O conteúdo está organizado por semestres e matérias para facilitar a navegação e a busca por informações específicas.
+
+## Estrutura do Repositório
+
+<p>/1-Semestre: Conteúdos e atividades do primeiro semestre.</p>
+<p>/2-Semestre: Conteúdos e atividades do segundo semestre.</p>
+<p>/3-Semestre: Conteúdos e atividades do terceiro semestre.</p>
+<p>/4-Semestre: Conteúdos e atividades do quarto semestre.</p>
+<p>/5-Semestre: Conteúdos e atividades do quinto semestre.</p>
+<p>/6-Semestre: Conteúdos e atividades do sexto semestre.</p>
+<p>/7-Semestre: Conteúdos e atividades do sétimo semestre.</p>
+<p>/8-Semestre: Conteúdos e atividades do oitavo semestre.</p>
+<p>README.md: Este arquivo de documentação.</p>
+
+## Tecnologias Utilizadas
+
+<p>Os conteúdos armazenados no repositório podem envolver uma variedade de tecnologias, incluindo mas não se limitando a:</p>
+
+<p>HTML5: Estruturação de conteúdo web.</p>p>
+<p>CSS3: Estilização de páginas web.</p>
+<p>JavaScript: Adição de interatividade.</p>
+<p>Python: Programação e scripts.</p>
+<p>SQL: Bancos de dados.</p>
+
+<p>Para acessar os conteúdos deste repositório, siga os seguintes passos:</p>
+
+```bash
+    mkdir IMT
+    cd IMT
+    git clone https://github.com/BrenoAugustoOG/IMT.git
+```
+Acesse as pastas e arquivos conforme necessário. Para visualizar o material de um semestre específico, entre na pasta correspondente ao semestre e acesse as subpastas das matérias.
+
+## Melhorias Futuras
+
+<p>Adição de novos conteúdos conforme avançam os semestres.</p>
+<p>Organização e revisão periódica dos materiais.</p>
+<p>Inclusão de exemplos e tutoriais para melhor compreensão dos projetos e atividades.</p>
+
+## Contato
+<p>Para qualquer dúvida ou sugestão, entre em contato através dos seguintes canais:</p>
+
+<li><a href="https://linkedin.com/in/BrenoAugustoOG">LinkedIn</a></li>
+<li><a href="https://github.com/BrenoAugustoOG">GitHub</a></li>
+
+<p>Sinta-se à vontade para explorar o repositório e contribuir com melhorias!</p>
