@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
         container fluid
     </div>
 
-    <div class="container-sm bg-sucess mt-4">
+    <div class="container-sm bg-succes mt-4">
         container sm
     </div>
     <div class="container-md bg-warning mt-4">
@@ -59,11 +59,11 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-3 border border-sucess mt-2">
+            <div class="col-sm-12 col-md-4 col-lg-3 border border-success mt-2">
                 sm:12, md:4, lg:3
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-5 border border-sucess mt-2">
+            <div class="col-sm-12 col-md-4 col-lg-5 border border-success mt-2">
                 sm: 12, md:4, lg:5
             </div>
         </div>
@@ -134,8 +134,9 @@
             </div>
         </div>
     </div> -->
-    <div class="container border border-primary p-3">
-        <div class="row bg-info allign-items-start" style="height: 150px;">
+
+    <!-- <div class="container border border-primary p-3">
+        <div class="row bg-info allign-items-start border border-primary" style="height: 150px;">
             <div class="col border border-danger">
                 topo
             </div>
@@ -144,8 +145,8 @@
                 era pra estar em cima, mas sou rebelde
             </div>
         </div>
-
-        <div class="row bg-info allign-items-center border" style="height: 150px;">
+        
+        <div class="row bg-warning allign-items-center border border-success" style="height: 150px;">
             <div class="col border border-danger">
                 no meio
             </div>
@@ -154,22 +155,83 @@
                 era pra estar no meio, mas sou rebelde
             </div>
         </div>
-
-        <div class="row bg-info allign-items-end" style="height: 150px;"></div>
+        
+        <div class="row bg-info allign-items-end border border-success" style="height: 150px;">
             <div class="col border border-danger">
                 no fundo
             </div>
+        </div>
+        <div class="col border border-danger allign-self-center">
+            era pra estar no fundo, mas sou rebelde
+        </div>
+    </div> -->
+    <!-- allign-self é o que serve para deixar os caras "rebeldes" -->
+    <!-- <div class="container mt-2 p-5 border border-secundary">
+        <div class="row justify-content-start my-2">
+            <div class="col-4 border border-primary">start</div>
+            <div class="col-4 border border-primary">start</div>
+        </div>
+
+        <div class="row justify-content-center my-2">
+            <div class="col-4 border border-danger">center</div>
+            <div class="col-4 border border-danger">center</div>
+        </div>
+
+        <div class="row justify-content-end my-2">
+            <div class="col-4 border border-success">end</div>
+            <div class="col-4 border border-success">end</div>
+        </div>
+
+        <div class="row justify-content-around my-2">
+            <div class="col-4 border border-warning">around</div>
+            <div class="col-4 border border-warning">around</div>
+        </div>
+
+        <div class="row justify-content-between my-2">
+            <div class="col-4 border border-info">between</div>
+            <div class="col-4 border border-info">between</div>
+        </div>
+    </div> -->
+    
+    <div class="container mt-2 p-5 border border-primary">
+        <div class="row">
+            <!-- d-flex: display: flex; -->
             
-            <div class="col border border-danger allign-self-center">
-                era pra estar no fundo, mas sou rebelder
+            <!-- padrão row da esquerda para a direita -->
+            <div class="d-flex bg-secondary border border-danger my-2">
+                <div class="p-4 border mx-2">1</div>
+                <div class="p-4 border mx-2">2</div>
+                <div class="p-4 border mx-2">3</div>
+            </div>
+            
+            <!-- flex-row-reverse da direita para a esquerda -->
+            <div class="d-flex flex-row-reverse bg-secondary border border-danger my-2">
+                <div class="p-4 border mx-2">1</div>
+                <div class="p-4 border mx-2">2</div>
+                <div class="p-4 border mx-2">3</div>
+            </div>
+            
+            <!-- flex-column: eixo principal se torna o vertical -->
+            
+            <!-- posicionamento de cima para baixo -->
+            <div class="d-flex flex-column bg-secondary border border-danger my-2">
+                <div class="p-4 border mx-2">1</div>
+                <div class="p-4 border mx-2">2</div>
+                <div class="p-4 border mx-2">3</div>
+            </div>
+            
+            <!-- flex-column-reverse: de baixo para cima -->
+            <div class="d-flex flex-column-reverse bg-secondary border border-danger my-2">
+                <div class="p-4 border mx-2">1</div>
+                <div class="p-4 border mx-2">2</div>
+                <div class="p-4 border mx-2">3</div>
             </div>
         </div>
     </div>
-
     <script>
         document.write("<p>" + window.innerWidth + "x" + window.innerHeight + "</p>");
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
