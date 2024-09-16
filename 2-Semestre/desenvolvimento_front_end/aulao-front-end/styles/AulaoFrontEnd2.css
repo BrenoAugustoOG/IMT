@@ -1,0 +1,28 @@
+body {
+    background-color: cornflowerblue;
+}
+
+#h1_paragrafo-02{
+    background-color: blueviolet;
+}
+
+.paragrafos-2-e-3{
+    background-color: burlywood;
+}
+/* Sempre uma classe é representada por . e um id é representado por # */
+
+/*
+#umaDiv h2{
+    color: red;
+}
+ A tag acima nos diz que todas as tags descendentes dela serão vemelhas */
+ 
+ #umaDiv > h2 {
+    color: red;
+ }
+ /* Seletor de filhos diretos */
+
+ .paragrafo-01, .paragrafos-2-e-3 {
+    color: blue;
+ }
+ 

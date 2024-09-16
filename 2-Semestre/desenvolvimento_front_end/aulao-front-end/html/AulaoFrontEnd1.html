@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão de Elementos básicos HTML</title>
+</head>
+
+<body>
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Bem-vindo ao Aulão de Desenvolvimento Front End</h1>
+        <p>Este é um exemplo de uma página para revisão de elementos básicos em HTML5 e CSS3</p>
+    </header>
+
+    <!-- Navegação -->
+    <nav> <!--Tag utilizada para navegação entre outras páginas-->
+        <ul> <!--E usamos a tag <a> que são as âncoras-->
+            <li><a href="#introdução"></a>Introdução</li>
+            <li><a href="#listas"></a>Listas</li>
+            <li><a href="#imagens"></a>Imagens</li>
+            <li><a href="audio-video"></a>Audio e Vídeo</li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Listas -->
+        <h2>Listas</h2>
+        <h3>Lista Não Ordenada</h3>
+        <ul> <!--O significado dessa tag é Uunordered List, onde os elementos dessa lista não ficam ordenados/numerados-->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <h3>Lista Ordenada</h3>
+        <ol> <!--O significado dessa tag é Ordered List, onde os elemetos dessa lista ficam ordenados/numerados, de acordo com a posição que estão-->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <h3>E abaixo temos um exemplo claro de listas dentro de outras listas</h3>
+        <p>Onde podemos colocar lista ordenadas dentro de listas não ordenadas e vice-versa</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4
+                <ol>
+                    <li>Item 4.1</li>
+                    <li>Item 4.2</li>
+                    <li>Item 4.3</li>
+                    <li>Item 4.4</li>
+                </ol>
+            </li>
+        </ul>
+
+        <!-- Imagens -->
+        <section id="imagens">
+            <h2>Imagens</h2>
+            <img src="link ou pasta onde o arquivo esta localizado" alt="descrição da imagem">
+        </section>
+
+        <!-- Audio e vídeo -->
+        <section id="audio-video">
+            <h2>Audio e vídeo</h2>
+            <h3>Audio</h3>
+            <audio controls>
+                <source media="endereço do audio" srcset="">
+            </audio>
+            <h3>Vídeo</h3>
+            <video src="#endereço do video"></video>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Este é o rodapé da página -->
+        <h3>Rodapé</h3>
+        <p>Este é o básico pra P1 de Desenvolvimento Front End</p>
+    </footer>
+</body>
+
+</html>
