@@ -1,0 +1,119 @@
+Aulão de Estatística - 2 Semestre
+
+População x Amostra
+População: Conjunto completo de itens que se deseja estudar, como todos os alunos de uma universidade.
+Amostra: 
+
+Estatística x Parâmetro
+Estatística: Medida calculada a partir de uma Amostra
+Parâmetro: Medida calculada a partir de uma População
+
+Tipos de variáveis:
+Qualitativas: genero e cor dos olhos (exemplo)
+Quantitativas: números
+
+Tipos de amostragem:
+Aleatória simples: Cada membro da população tem a mesma probabilidade de ser selecionado, sem qualquer estrutura ou agrupamento
+Por conveniência: Facilidade de acesso ou proximidade
+Estratificada: Dividida em subgrupos com base em uma característica específica, e uma amostra é escolhida aleatoriamente de cada estrato
+Por conglomerado: alguns grupos inteiros sao selecionados aleatoriamente
+
+Classificação dos dados:
+Nominais: sem nenhuma ordem específica
+Ordinais: com uma ordem mas suas diferenças não são mensuráveis
+Intervalares: Intervalos entre os valores são iguais. Não há zero absoluto
+De razão: Intervalos entre os valores é zero absoluto
+
+Estudo estatístico:
+Observacional: O pesquisador observado e coleta dados sem interferir
+Experimento: O pesquisador faz observações e interfere
+
+Coleta de dados:
+Simulação: Uso de modelos matematicos ou fisicos para reproduzir condições de Estudo
+Pesquisa: investigação de características de uma população por meio de entrevistas
+
+Distribuição de frequência:
+é uma tabela que organiza grande conjuntos de dados em classes e frequência
+    como construir: 
+        passo 1: determinar o numero de classes fazendo a regra da raiz quadrado (pegar o numero de classes e arredondar pro valor de baixo)
+        passo 2: calcular a amplitude de classe, basta fazer a amplitude da Distribuição (valor máximo - valor mínimo) e dividir pelo número de classes
+        passo 3: definir os limites das classes (pegar o valor + amplitude de classes) *nunca colocar o mesmo valor pros limites
+        passo 4: contar o numero de observações em cada classe (frequência)
+        PONTO MÉDIO: é a soma dos limites superior e inferior da classe, dividido por 2
+        FREQUÊNCIA RELATIVA: é a frequência da classe dividida pela quantidade total de dados.
+        FREQUÊNCIA ACUMULADA: é a soma da frequência acumulada da classe anterior
+
+Histograma:
+Gráfico de barras que mostra a frequência de cada classe
+
+Polígono de frequência:
+Um gráfico que conecta os pontos médios das classes com linhas retas
+
+Medidas de Posição:
+É uma medida que vai dividir a sua coleção de dados em um valor específico
+
+Média:
+
+Média Ponderada:
+É a soma dos valores multiplicados pelo seus pesos, divididos pela soma de todos os pesos.
+
+Mediana:
+Valor central de um conjunto de dados ordenado, para conjunto com número par de dados, a mediana é a média dos dois valores que ocupam o meio da Posição
+
+Moda:
+Valor que mais se repete
+
+Outliers:
+Valores incomuns, pontos fora do curva
+
+Separatriz:
+É qualquer valor que vai partilhar e dividir um conjunto de dados ordenados em partes iguais
+
+Quartiz:
+Sendo que geralmente Q1 marca o valor que representa a metade da metade à esquerda
+Q2 representa a metade
+Q3 representa a metade da metade para a direita
+
+Amplitude interquartil
+Sempre será o Q3 - Q1
+
+Identificando os Outliers
+    Passo 1: Achar Q1 e Q3
+    Passo 2: Achar a amplitude interquartil
+    Passo 3: Amplitude Interquartil*1.5
+    Passo 4: Q1 - 1.5 * Amplitude Interquartil
+    Passo 5: Q3 + 1.5 * Amplitude Interquartilbb
+
+Escore-z
+Pode ser usado para identificar valores indentificar valores incomuns de um conjunto de dados que seja aproximadamente em formato de sino 
+
+Medidas de Variação:
+Amplitude: 
+Valor máximo - valor mínimo
+
+Desvio:
+É o valor x - média (exemplo: minha altura - média da altura dos homens)
+
+Variância Populacional:
+Soma dos quadrados dos desvios dividido pelo numero de N elementos
+
+Desvio padrão Populacional:
+É a formula da variância porém dentro de uma raiz quadrada
+
+Variância Amostral e Desvio padrão Amostral
+Representado agora por (x-linha) que seria a média amostral e o n tem que ser subtraído por 01
+
+Interpretando desvio padrão:
+    Quanto menor o desvio padrão s, mais concentradas, isto é menos espalhado no gráfico
+
+Probabilidade Clássica:
+É a chance igualmente distribuída de cair resultados possíveis do evento E dentro do Espaço Amostral (exemplo: Dado)
+
+Probabilidade Empírica:
+
+Lei dos grandes numeros:
+Quanto mais vezes fazemos um experimento, maior a chance das probabilidades de cada evento acontecer tende a ser a sua probabilidade RELATIVA
+
+Complemento do evento E:
+Quando temos a probabilidade de um evento acontecer, tambem temos um evento do envento não ocorrer
+Por exemplo: temos um dado e a chance de ele cair 1 é 1/6, porém tambem tem a chance de ele tambem nao cair que é 5/6
