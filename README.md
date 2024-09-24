@@ -22,7 +22,7 @@ Este repositório contém diversos arquivos e pastas relacionados às atividades
 
 <p>Os conteúdos armazenados no repositório podem envolver uma variedade de tecnologias, incluindo mas não se limitando a:</p>
 
-<p>HTML5: Estruturação de conteúdo web.</p>p>
+<p>HTML5: Estruturação de conteúdo web.</p>
 <p>CSS3: Estilização de páginas web.</p>
 <p>JavaScript: Adição de interatividade.</p>
 <p>Python: Programação e scripts.</p>
