@@ -11,11 +11,38 @@
 
 <body onload="obterFilmes()">
 
+    <div class="modal fade" id="modalCadastro" aria-labelledby="modalCadastro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Cadastro de Usuários</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-dismissible fade d-none alert-modal-cadastro" role="alert"></div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="usuarioCadastroInput" class="col-form-label">Usuário</label>
+                            <input type="text" id="usuarioCadastroInput" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordCadastroInput" class="col-form-label">Senha</label>
+                            <input type="password" id="passwordCadastroInput" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="cadastrarUsuario()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <nav class="navbar navbar-expand-md bg-light">
-                    <a href="#" class="navbar-brand">Filmes</a>
+                    <a href="index.html" class="navbar-brand">Filmes</a>
                     <button class="navbar-toggler" 
                             type="button" 
                             data-bs-toggle="collapse" 
@@ -25,6 +52,17 @@
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                     </button>
+                    <div class="collapse navbar-collapse" id="myNav">
+                        <div class="navbar-nav ms-auto">
+                            <a href="#" class="nav-link active me-2" aria-current="page">
+                                Login
+                            </a>
+
+                            <a href="#" class="nav-link active me-2" aria-current="page" data-bs-toggle="modal" data-bs-target="#modalCadastro">
+                                Novo Usuário
+                            </a>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -34,7 +72,6 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="alert alert-danger alert-dismissible fade d-none" role="alert">
-                    
                     Preencha todos os campos!!
                     <button type="button" class="btn-close" data-bt-dismiss="alert" aria-label="btn-close"></button>
                     
