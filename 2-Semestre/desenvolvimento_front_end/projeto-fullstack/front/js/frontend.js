@@ -15,6 +15,23 @@ function exibirFilmes(filmes) {
     }
 }
 
+function exibirAlerta(selector, innerHTML, classesToAdd, classesToRemove, timeout) {
+    let alert = document.querySelector('.alert-modal-cadastro')
+    alert.innerHTML = innerHTML
+    alert.classList.add(classesToAdd)
+    alert.classList.remove(classesToRemove)
+    setTimeout(() => {
+        alert.classList.remove(...classesToAdd)
+        alert.classList.add(...classesToRemove)
+    }, timeout)
+}
+
+function escondeModal(seletor,timeout) {
+    setTimeout(() =>{
+        alert.classList.remove(...classesToAdd)
+            alert.classList.add(...classesToRemove)
+    })
+}
 
 async function obterFilmes() {
     const filmesEndpoint = '/filmes'
@@ -34,36 +51,40 @@ async function cadastrarFilme() {
     sinopseInput.value = ""
     if (titulo && sinopse) {
         const filmes = (await axios.post (URLcompleta, {titulo, sinopse})).data
+        exibirAlerta('.alert-modal-cadatro', "Filme Cadastrado com Sucesso!", ['show', 'alert-success'], ['d-none'], 2000)
         exibirFilmes(filmes)
     }
     else {
-        let alert = document.querySelector('.alert')
-        alert.classList.add('show')
-        alert.classList.remove('d-none')
-        setTimeout(() => {
-            alert.classList.remove('show')
-            alert.classList.add('d-none')
-        }, 2000)
+        exibirAlerta('.alert-filme', "Preencha todos os Campos!", ['show', 'alert-danger'], ['d-none'], 2000)
     }
 }
 
 async function cadastrarUsuario() {
-    // const cadastrarUsuarioEndpoint = '/signup'
     let usuarioCadastroInput = document.querySelector('#usuarioCadastroInput')
     let passwordCadastroInput = document.querySelector('#passwordCadastroInput')
     let usuarioCadastro = usuarioCadastroInput.value
     let passwordCadastro = passwordCadastroInput.value
     if (usuarioCadastro && passwordCadastro) {
-        
+        try {
+            usuarioCadastroInput.value = ""
+            passwordCadastroInput.value = ""
+            const cadastroEndpoint = '/signup'
+            const URLcompleta = `${protocolo}${baseURL}${cadastroEndpoint}`
+            await axios.post(
+                URLcompleta, {login: usuarioCadastro, password: passwordCadastro}
+            )
+            exibirAlerta('.alert-modal-cadatro', "Usuario cadastrado com Sucesso!", ['show', 'alert-sucess'], ['d-none'], 2000)
+            escondeModal('#modalCadastro', 2000)
+        }
+        catch (e){
+            usuarioCadastroInput.value = ""
+            passwordCadastroInput.value = ""
+            exibirAlerta('.alert-modal-cadatro', "Não foi possível cadastrar o Usuário, tente novamente.", ['show', 'alert-danger'], ['d-none'], 2000)
+            escondeModal('#modalCadastro', 2000)
+        }
+
     }
     else {
-        let alert = document.querySelector('.alert-modal-cadastro')
-        alert.innerHTML = "Preencha todos os campos!"
-        alert.classList.add('show', 'alert-danger')
-        alert.classList.remove('d-none')
-        setTimeout(() =>{
-            alert.classList.remove("show")
-            alert.classList.add('d-none')
-        }, 2000)
+        exibirAlerta('.alert-modal-cadatro', "Preencha todos os Campos!", ['show', 'alert-danger'], ['d-none'], 2000)
     }
 }
