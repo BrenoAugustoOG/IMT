@@ -1,8 +1,6 @@
 const protocolo = 'http://'
 const baseURL = 'localhost:3000'
-
 function exibirFilmes(filmes) {
-    const filmesEndpoint = '/filmes'
     let tabela = document.querySelector('.filmes')
     let corpoTabela = tabela.getElementsByTagName('tbody')[0]
     corpoTabela.innerHTML = ""
@@ -14,32 +12,30 @@ function exibirFilmes(filmes) {
         celulaSinopse.innerHTML = filme.sinopse
     }
 }
-
-function exibirAlerta(selector, innerHTML, classesToAdd, classesToRemove, timeout) {
-    let alert = document.querySelector('.alert-modal-cadastro')
+function exibirAlerta(seletor, innerHTML, classesToAdd, classesToRemove, timeout) {
+    let alert = document.querySelector(seletor)
     alert.innerHTML = innerHTML
-    alert.classList.add(classesToAdd)
-    alert.classList.remove(classesToRemove)
+    alert.classList.add(...classesToAdd)
+    alert.classList.remove(...classesToRemove)
     setTimeout(() => {
         alert.classList.remove(...classesToAdd)
         alert.classList.add(...classesToRemove)
     }, timeout)
 }
-
-function escondeModal(seletor,timeout) {
-    setTimeout(() =>{
-        alert.classList.remove(...classesToAdd)
-            alert.classList.add(...classesToRemove)
-    })
+function escondeModal(seletor, timeout) {
+    setTimeout (() => {
+        let modalCadastro = bootstrap.Modal.getInstance(
+            document.querySelector(seletor)
+        )
+        modalCadastro.hide()
+    }, timeout)
 }
-
 async function obterFilmes() {
     const filmesEndpoint = '/filmes'
     const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`
     const filmes = (await axios.get(URLcompleta)).data
     exibirFilmes(filmes)
 }
-
 async function cadastrarFilme() {
     const filmesEndpoint = '/filmes'
     const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`
@@ -51,15 +47,16 @@ async function cadastrarFilme() {
     sinopseInput.value = ""
     if (titulo && sinopse) {
         const filmes = (await axios.post (URLcompleta, {titulo, sinopse})).data
-        exibirAlerta('.alert-modal-cadatro', "Filme Cadastrado com Sucesso!", ['show', 'alert-success'], ['d-none'], 2000)
+        exibirAlerta('.alert-filme', "Filme cadastrado com sucesso!!!", ['show', 'alert-success'],
+                    ['d-none'], 2000)
         exibirFilmes(filmes)
     }
     else {
-        exibirAlerta('.alert-filme', "Preencha todos os Campos!", ['show', 'alert-danger'], ['d-none'], 2000)
+        exibirAlerta('.alert-filme', "Preencha todos os campos", ['show', 'alert-danger'],
+                    ['d-none'], 2000)
     }
 }
-
-async function cadastrarUsuario() {
+async function cadastrarUsuario() {  
     let usuarioCadastroInput = document.querySelector('#usuarioCadastroInput')
     let passwordCadastroInput = document.querySelector('#passwordCadastroInput')
     let usuarioCadastro = usuarioCadastroInput.value
@@ -70,21 +67,23 @@ async function cadastrarUsuario() {
             passwordCadastroInput.value = ""
             const cadastroEndpoint = '/signup'
             const URLcompleta = `${protocolo}${baseURL}${cadastroEndpoint}`
-            await axios.post(
-                URLcompleta, {login: usuarioCadastro, password: passwordCadastro}
+            await axios.post (
+                URLcompleta,
+                {login: usuarioCadastro, password: passwordCadastro}
             )
-            exibirAlerta('.alert-modal-cadatro', "Usuario cadastrado com Sucesso!", ['show', 'alert-sucess'], ['d-none'], 2000)
+            exibirAlerta('.alert-modal-cadastro', "Usuário cadastrado com sucesso!!!",
+                         ['show', 'alert-success'], ['d-none'], 2000)
             escondeModal('#modalCadastro', 2000)
         }
-        catch (e){
-            usuarioCadastroInput.value = ""
+        catch (e) {
             passwordCadastroInput.value = ""
-            exibirAlerta('.alert-modal-cadatro', "Não foi possível cadastrar o Usuário, tente novamente.", ['show', 'alert-danger'], ['d-none'], 2000)
+            exibirAlerta('.alert-modal-cadastro', "Não foi possível cadastrar usuário!!!",
+                         ['show', 'alert-danger'], ['d-none'], 2000)
             escondeModal('#modalCadastro', 2000)
         }
-
     }
     else {
-        exibirAlerta('.alert-modal-cadatro', "Preencha todos os Campos!", ['show', 'alert-danger'], ['d-none'], 2000)
+        exibirAlerta('.alert-modal-cadastro', "Preencha todos os campos!!!",
+                     ['show', 'alert-danger'], ['d-none'], 2000)
     }
 }
