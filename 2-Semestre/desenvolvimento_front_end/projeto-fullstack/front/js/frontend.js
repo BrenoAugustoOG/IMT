@@ -31,12 +31,6 @@ function escondeModal(seletor, timeout) {
         modalCadastro.hide()
     }, timeout)
 }
-async function obterFilmes() {
-    const filmesEndpoint = '/filmes'
-    const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`
-    const filmes = (await axios.get(URLcompleta)).data
-    exibirFilmes(filmes)
-}
 
 async function prepararPagina() {
     const loginLink = document.querySelector('#loginLink')
@@ -44,15 +38,21 @@ async function prepararPagina() {
     const token = localStorage.getItem("token")
     if (token) {
         loginLink.innerHTML = 'Logout'
-        cadastrarFilmeButton.disabled = 'False'
-    } 
+        cadastrarFilmeButton.disabled = false
+    }   
     else {
         loginLink.innerHTML = 'Login'
-        cadastrarFilmeButton.disabled = 'True'
-    }
+        cadastrarFilmeButton.disabled = true
+    } 
     obterFilmes();
 }
 
+async function obterFilmes() {
+    const filmesEndpoint = '/filmes'
+    const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`
+    const filmes = (await axios.get(URLcompleta)).data
+    exibirFilmes(filmes)
+}
 async function cadastrarFilme() {
     const filmesEndpoint = '/filmes'
     const URLcompleta = `${protocolo}${baseURL}${filmesEndpoint}`
@@ -104,7 +104,6 @@ async function cadastrarUsuario() {
                      ['show', 'alert-danger'], ['d-none', 'alert-success'], 2000)
     }
 }
-
 const fazerLogin = async () => {
     let usuarioLoginInput = document.querySelector('#usuarioLoginInput')
     let passwordLoginInput = document.querySelector('#passwordLoginInput')
@@ -118,7 +117,7 @@ const fazerLogin = async () => {
                 URLcompleta,
                 {login: usuarioLogin, password: passwordLogin}
             )
-            // console.log(response)
+            //console.log(response)
             localStorage.setItem("token", response.data)
             usuarioLoginInput.value = ""
             passwordLoginInput.value = ""
