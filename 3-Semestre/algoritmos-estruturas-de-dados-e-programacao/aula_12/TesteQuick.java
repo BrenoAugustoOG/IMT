@@ -1,4 +1,4 @@
-public import java.util.Date;
+import java.util.Date;
 import java.util.Scanner;
 
 public class TesteQuick {
@@ -22,16 +22,14 @@ public class TesteQuick {
             fim = new Date().getTime();
             //System.out.println(v);
             System.out.println("quick para tamanho " + t + ", tempo = " + (fim-ini));
-            ini = new Date().getTime();
-            v.quickSort(0, t-1);
-            fim = new Date().getTime();
-            //System.out.println(v);
-            System.out.println("quick ordenado para tamanho " + t + ", tempo = " + (fim-ini));
+            // ini = new Date().getTime();
+            // v.quickSort(0, t-1);
+            // fim = new Date().getTime();
+            // System.out.println(v);
+            // System.out.println("quick ordenado para tamanho " + t + ", tempo = " + (fim-ini));
             System.out.println("\ndigite o tamanho, 0 encerra");
             t = sc.nextInt();
         }
         sc.close();
     }
-} TesteQuick {
-    
 }
