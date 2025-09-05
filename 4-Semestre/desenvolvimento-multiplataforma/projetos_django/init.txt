@@ -1,0 +1,1 @@
+django project (if any) live here
