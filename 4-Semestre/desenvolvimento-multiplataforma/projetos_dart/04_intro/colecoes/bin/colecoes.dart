@@ -50,8 +50,11 @@ void jogoMegaSena() {
 }
 
 void main(List<String> arguments) {
+  var filmes
+  
+  
+  
   // jogoMegaSena();
-
   // Testes de Coleção a partir da página ap03:07
   // 2.3 Tupla
   var tupla = ("Ana", 18, true);
