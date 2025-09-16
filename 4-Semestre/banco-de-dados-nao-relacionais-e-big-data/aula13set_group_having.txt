@@ -1,0 +1,39 @@
+// aula 13/set Funções de grupo + having
+use imdb_si
+db.movie.count()
+// contagem de filmes por país 
+db.movie.aggregate(
+    {$group: {_id: {país: "$countries" },
+             contagem_pais : {$count: {} } } } ,
+    {$sort: {contagem_pais: -1 } } )
+// desembalando os elementos do vetor    
+db.movie.aggregate(
+    {$unwind: "$countries"}, 
+    {$group: {_id: {país: "$countries" },
+             contagem_pais : {$count: {} } } } ,
+    {$sort: {contagem_pais: -1 } } )
+// somente Brazil  
+db.movie.aggregate(
+    {$unwind: "$countries"},
+    {$match: {countries: /bra.*il/i } },
+    {$group: {_id: {país: "$countries" },
+             contagem_pais : {$count: {} } } } ,
+    {$sort: {contagem_pais: -1 } } ) 
+// aplicando having do group by 
+db.movie.aggregate(
+    {$unwind: "$countries"}, 
+    {$group: {_id: {país: "$countries" },
+             contagem_pais : {$count: {} } } } ,
+    {$match: {"contagem_pais" : {$gte: 1000}}} ,
+    {$sort: {contagem_pais: -1 } } )
+// agrupando por 3 campos - país , genero e ano lancamento
+db.movie.aggregate(
+    {$unwind: "$countries"}, 
+    {$unwind: "$genre"},
+    {$group: {_id: {país: "$countries", gênero:"$genre", ano: "$ano_lancamento"  },
+             contagem_pais_genero : {$count: {} } } } ,
+    {$match: {"contagem_pais_genero" : {$lte: 100}}} ,
+    {$sort: {contagem_pais_genero: -1 } } )
+
+
+    
