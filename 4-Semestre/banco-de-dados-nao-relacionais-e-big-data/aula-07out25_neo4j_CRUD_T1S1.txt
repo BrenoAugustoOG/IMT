@@ -1,0 +1,81 @@
+// aula 02/outubro - CRUD Neo4j - T1S1
+// nós para filmes e artistas - arestas são o elenco
+// criando nós de filmes
+CREATE (f:Filme { nome: "Star Wars", ano_lançamento: 1977, gênero: "Ficção",
+estúdio: "Lucas Films" })
+RETURN f
+// criando dois atores
+CREATE (a1:Artista {nome: "Harrison Ford" , sexo: "Masculino", país: "EUA" } ),
+(a2:Artista {nome: "Carrie Fisher" , sexo: "Feminino", país: "EUA" } ) 
+RETURN a1, a2
+// RETURN * 
+// mostrar todos os nós e relacionamentos
+MATCH (n)
+RETURN n 
+// criando relacionamento entre filme e artista -> arestas
+MATCH (art10:Artista), (art20:Artista) , (mov:Filme)
+WHERE art10.nome = "Harrison Ford" AND art20.nome = "Carrie Fisher"
+AND mov.nome = "Star Wars" 
+CREATE (mov)-[e1:Elenco {tipo_participação: "Ator", personagem: "Hans Solo"}]->(art10) ,
+(mov)-[e2:Elenco {tipo_participação: "Atriz", personagem: "Princesa Leia"} ]->(art20)
+// RETURN art10, art20, mov, e1, e2 
+RETURN * 
+
+// criando outro filme e ator
+CREATE (f2:Filme {nome: "Ainda estou aqui", país: "Brasil", gênero: "Drama",
+ano_lançamento: 2024, prêmios : ["Oscar Filme estrangeiro", "Palma de Ouro Cannes Melhor atriz"] } )
+RETURN f2
+// criando atriz
+CREATE (a100:Artista {nome: "Fernanda Torres", sexo: "Feminino", país: "Brasil"}),
+(a200:Artista {nome: "Walter Salles" , sexo: "Masculino", país: "Brasil" } )
+RETURN a100, a200
+// relacionando artistas e filme
+MATCH (x:Artista {nome: "Fernanda Torres"}), (y:Artista {nome: "Walter Salles"}),
+(z:Filme {nome: "Ainda estou aqui"} )
+CREATE (z)-[e33:Elenco {tipo_participação: "Atriz", personagem: "Eunice Paiva"}]->(x),
+(z)-[e44:Elenco {tipo_participação: "Diretor" } ]->(y)
+RETURN x, y, z , e33, e44
+
+// mostrar todos os artistas e filmes
+MATCH (bolinha)-[abobrinha:Elenco]->(xuxu)
+RETURN *
+
+// consultas
+// mostrar todos dados dos artistas
+MATCH (a:Artista)
+RETURN a
+
+// mostrar o nome e o país dos artistas
+MATCH (a:Artista)
+RETURN a.nome, a.país
+
+// consultas com LIKE
+// atores com nome Harrison   LIKE '%harrison%'   (?i) busca insensitiva 
+MATCH (a:Artista)
+WHERE a.nome =~ '(?i).*harrison.*'
+RETURN a
+
+// primeiro nome é harrison
+MATCH (a:Artista)
+WHERE a.nome =~ '(?i)harrison.*'
+RETURN a
+
+// usando START
+MATCH (a:Artista)
+WHERE toUpper(a.nome) STARTS WITH 'HARRISON' 
+RETURN a
+
+// ultima palavra é Ford
+MATCH (a:Artista)
+WHERE a.nome =~ '(?i).*ford' 
+RETURN a
+// usando o ENDS
+MATCH (a:Artista)
+WHERE toUpper(a.nome) ENDS WITH 'FORD' 
+RETURN a
+
+// like escrito com CONTAINS
+// filmes que tem a palavra WAR no titulo
+MATCH (f:Filme)
+WHERE toUpper(f.nome) CONTAINS 'WAR'   // '(?i).*war.*'
+RETURN f
