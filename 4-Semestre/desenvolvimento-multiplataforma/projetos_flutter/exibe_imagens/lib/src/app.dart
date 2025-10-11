@@ -4,8 +4,6 @@ import 'dart:convert';
 import 'models/image_model.dart';
 import 'widgets/image_list.dart';
 
-
-
 class AppState extends State<App> {
   int numeroImagens = 0;
   List<ImageModel> imagens = [];
@@ -16,7 +14,7 @@ class AppState extends State<App> {
     });
     var url = Uri.https('api.pexels.com', '/v1/search', {
       'query': 'people',
-      'page': '1',
+      'page': '$numeroImagens',
       'per_page': '1',
     });
     var req = http.Request('GET', url);
