@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'models/image_model.dart';
 import 'widgets/image_list.dart';
 
+
+
 class AppState extends State<App> {
   int numeroImagens = 0;
   List<ImageModel> imagens = [];
@@ -14,7 +16,7 @@ class AppState extends State<App> {
     });
     var url = Uri.https('api.pexels.com', '/v1/search', {
       'query': 'people',
-      'page': '$numeroImagens',
+      'page': '1',
       'per_page': '1',
     });
     var req = http.Request('GET', url);
@@ -47,7 +49,7 @@ class AppState extends State<App> {
     //    http.get(Uri.parse('https://api.pexels.com/v1/search?query=people'));
   }
 
-  String chaveAPI = "sua_chave_aqui";
+  String chaveAPI = "MCykgXsWgwvdDIt0027ghvD0j8BFNxLjeFqHr0MweIxcopG8xz2y58XI";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
