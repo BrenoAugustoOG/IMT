@@ -18,16 +18,6 @@ Este repositório contém diversos arquivos e pastas relacionados às atividades
 <p>/8-Semestre: Conteúdos e atividades do oitavo semestre.</p>
 <p>README.md: Este arquivo de documentação.</p>
 
-## Tecnologias Utilizadas
-
-<p>Os conteúdos armazenados no repositório podem envolver uma variedade de tecnologias, incluindo mas não se limitando a:</p>
-
-<p>HTML5: Estruturação de conteúdo web.</p>
-<p>CSS3: Estilização de páginas web.</p>
-<p>JavaScript: Adição de interatividade.</p>
-<p>Python: Programação e scripts.</p>
-<p>SQL: Bancos de dados.</p>
-
 <p>Para acessar os conteúdos deste repositório, siga os seguintes passos:</p>
 
 ```bash
@@ -41,7 +31,6 @@ Acesse as pastas e arquivos conforme necessário. Para visualizar o material de 
 
 <p>Adição de novos conteúdos conforme avançam os semestres.</p>
 <p>Organização e revisão periódica dos materiais.</p>
-<p>Inclusão de exemplos e tutoriais para melhor compreensão dos projetos e atividades.</p>
 
 ## Contato
 <p>Para qualquer dúvida ou sugestão, entre em contato através dos seguintes canais:</p>
