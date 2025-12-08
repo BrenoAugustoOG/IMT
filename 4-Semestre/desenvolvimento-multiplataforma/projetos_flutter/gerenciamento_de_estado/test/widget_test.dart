@@ -8,39 +8,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:gerenciamento_de_estado/src/app.dart';
+import 'package:gerenciamento_de_estado/main.dart';
 
 void main() {
-  testWidgets('renders login form elements', (WidgetTester tester) async {
-    // Build the app and trigger a frame.
-    await tester.pumpWidget(App());
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
 
-    // Verify there are two text fields (email + password).
-    expect(find.byType(TextField), findsNWidgets(2));
-    // Verify email label appears.
-    expect(find.text('Endereço de e-mail'), findsOneWidget);
-    // Verify a password field exists (TextField with obscureText: true).
-    expect(
-      find.byWidgetPredicate((w) => w is TextField && w.obscureText == true),
-      findsOneWidget,
-    );
-    // Verify the Login button.
-    expect(find.widgetWithText(ElevatedButton, 'Login'), findsOneWidget);
-  });
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
 
-  testWidgets('allows typing and tapping login', (WidgetTester tester) async {
-    await tester.pumpWidget(App());
-
-    // Enter email and password.
-    await tester.enterText(find.byType(TextField).at(0), 'user@example.com');
-    await tester.enterText(find.byType(TextField).at(1), 'secret');
-
-    // Tap login button.
-    await tester.tap(find.widgetWithText(ElevatedButton, 'Login'));
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
-    // No navigation yet, just ensure tap did not throw and fields contain text.
-    expect(find.text('user@example.com'), findsOneWidget);
-    expect(find.text('secret'), findsOneWidget);
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
   });
 }

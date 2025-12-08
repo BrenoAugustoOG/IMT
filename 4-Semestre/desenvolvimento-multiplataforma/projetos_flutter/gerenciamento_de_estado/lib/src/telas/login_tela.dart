@@ -1,50 +1,79 @@
 import 'package:flutter/material.dart';
-
-class LoginTela extends StatelessWidget {
+import 'package:gerenciamento_de_estado/src/blocs/provider.dart';
+import '../blocs/bloc.dart';
+class LoginTela extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    final bloc = Provider.of(context);
     return Container(
-      //20 pixels de margem esquerda, direita, em cima e embaixo
-      margin: EdgeInsets.all(20.0),
-      child: Column(children: [emailField(), passwordField(), 
-      Container(
-        margin: EdgeInsets.only(top: 12.0),
-        child: Row(
-          children: [
-            Expanded( 
-              child: submitButton()
-          )
+      margin: EdgeInsets.all(18.0),
+      child: Column(
+        children: [
+          emailField(bloc), 
+          passwordField(bloc),
+          Container(
+            margin: EdgeInsets.only(top: 12),
+            child: Row(
+              children: [
+                Expanded(
+                  child: submitButton(bloc)
+                )
+              ],
+            ),
+          ) 
         ],
       ),
-      )
-
-      ]),
     );
   }
 
-  Widget emailField() {
-    return TextField(
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        //dica que aparece quando o usuário clica
-        hintText: 'seu@email.com',
-        //rótulo flutuante: usuário clica, ele "sobe"
-        labelText: 'Endereço de e-mail',
-      ),
-    );
+  Widget emailField(Bloc bloc){
+    return StreamBuilder(
+      stream: bloc.email, 
+      builder:(context, AsyncSnapshot <String> snapshot){
+        return TextField(
+          onChanged: (novoValor){
+            bloc.changeEmail(novoValor);
+          },
+          keyboardType: TextInputType.emailAddress,
+          decoration: InputDecoration(
+            //texto que aparece quando o usuário toca/clica
+            hintText: 'seu@email.com',
+            //rótulo flutuante, usuário clica, a dica sobe
+            labelText: 'Endereço de email',
+            errorText: snapshot.hasError ? snapshot.error.toString() : null
+          ),
+        );
+      }
+    ); 
   }
 
-  Widget passwordField() {
-    return TextField(
-      obscureText: true,
-      decoration: InputDecoration(hintText: "Senha", labelText: "Senha"),
+  Widget passwordField(Bloc bloc){
+    return StreamBuilder(
+      stream: bloc.password,
+      builder: (BuildContext context, AsyncSnapshot <String> snapshot){
+        return TextField(
+          onChanged: bloc.changePassword,
+          obscureText: true,
+          decoration: InputDecoration(
+            hintText: 'Senha',
+            labelText: 'Senha',
+            errorText: snapshot.error?.toString()      
+          ),
+        );
+      },
     );
+
   }
 
-  Widget submitButton() {
-    return ElevatedButton(
-      onPressed: () {}, //ainda não temos o que fazer, função vazia
-      child: Text('Login'),
+  Widget submitButton(Bloc bloc){
+    return StreamBuilder(
+      stream: bloc.emailAndPasswordAreOkay, 
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot){
+        return ElevatedButton(
+          onPressed:  snapshot.hasData ? (){bloc.submitForm();} : null , 
+          child: Text('Login')
+        );
+      }
     );
   }
 }

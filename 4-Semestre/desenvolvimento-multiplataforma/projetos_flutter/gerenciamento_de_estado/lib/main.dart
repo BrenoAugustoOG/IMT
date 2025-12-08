@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gerenciamento_de_estado/src/app.dart';
-
-void main() {
+import 'src/app.dart' show App;
+void main(){
   runApp(App());
 }
